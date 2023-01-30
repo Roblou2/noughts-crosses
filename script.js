@@ -9,7 +9,6 @@ const grid = (() => {
 for (let z = 0; z < gridSize; z++) {
     let emptySquare = document.createElement('div') 
     emptySquare.classList.add('square')  
-emptySquare.textContent = (z + 1)
     gameGrid.appendChild(emptySquare)    
 
 }
@@ -46,6 +45,7 @@ return this.textContent = gameBoard[0]
     }
 
 else if (gameBoard[i] === undefined && gameBoard[i-1] === 'X') {
+  
 gameBoard[i] = (playerTwo.getSign())  
  //get sign for playerTwo ('0') and push
 return this.textContent = gameBoard[i]
@@ -56,10 +56,13 @@ gameBoard[i] = (playerOne.getSign())
 
 return this.textContent = gameBoard[i]
 }
-
+else if (this.textContent == 'X' || this.textContent == '0') { //logic for squares already filled
+   return 
     }
-}
 
+
+}
+}
 
 
 //DOM interaction
