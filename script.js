@@ -1,4 +1,4 @@
-//set the game up
+//set the game grid up
 
 
 //create squares for game grid
@@ -14,7 +14,7 @@ for (let z = 0; z < gridSize; z++) {
 }
 })()
 
-//make array to keep track of game
+//array for keeping track of game
 const gameBoard = new Array(9); //records moves on the gameboard.
 
 const Player = (name, sign) => {
@@ -71,8 +71,79 @@ else if (this.textContent == 'X' || this.textContent == '0') { //logic for squar
 //listen for click in each square
 let square = document.querySelectorAll('.square')
 
+
+const int = (() => {
 for (let z = 0; z < square.length; z++) {
-square[z].addEventListener('click', gameTracker);
+square[z].addEventListener('click', gameTracker)
+square[z].addEventListener('click', () => {
+
+    //PLAYER 1 WIN TRACKER 
+    //horizontal wins for player 1
+    if (square[0].textContent == 'X' && square[1].textContent == 'X' && square[2].textContent == 'X') {
+        console.log(`player 1 wins!`)
+        }
+        else if (square[3].textContent == 'X' && square[4].textContent == 'X' && square[5].textContent == 'X') {
+         console.log(`player 1 wins!`)
+            }
+            else if (square[6].textContent == 'X' && square[7].textContent == 'X' && square[8].textContent == 'X') {
+               console.log(`player 1 wins!`)
+                }
+                //vertical wins for player 1
+
+                if (square[0].textContent == 'X' && square[3].textContent == 'X' && square[6].textContent == 'X') {
+                    console.log(`player 1 wins!`)
+                    }
+                    else if (square[1].textContent == 'X' && square[4].textContent == 'X' && square[7].textContent == 'X') {
+                     console.log(`player 1 wins!`)
+                        }
+                        else if (square[2].textContent == 'X' && square[5].textContent == 'X' && square[8].textContent == 'X') {
+                           console.log(`player 1 wins!`)
+                            }
+
+                            // diagonal wins player 1
+                            else if (square[0].textContent == 'X' && square[4].textContent == 'X' && square[8].textContent == 'X') {
+                                console.log(`player 1 wins!`)
+                                   }
+                                   else if (square[2].textContent == 'X' && square[4].textContent == 'X' && square[6].textContent == 'X') {
+                                      console.log(`player 1 wins!`)
+                                       }
+
+                                       //PLAYER 2 WIN TRACKER
+
+                                       //horizontal wins player 2
+                                     if (square[0].textContent == '0' && square[1].textContent == '0' && square[2].textContent == '0') {
+                                        console.log(`player 2 wins!`)
+                                        }
+                                        else if (square[3].textContent == '0' && square[4].textContent == '0' && square[5].textContent == '0') {
+                                         console.log(`player 2 wins!`)
+                                            }
+                                            else if (square[6].textContent == '0' && square[7].textContent == '0' && square[8].textContent == '0') {
+                                               console.log(`player 2 wins!`)
+                                                }
+
+                                                    //vertical wins for player 2
+
+                if (square[0].textContent == '0' && square[3].textContent == '0' && square[6].textContent == '0') {
+                    console.log(`player 2 wins!`)
+                    }
+                    else if (square[1].textContent == '0' && square[4].textContent == '0' && square[7].textContent == '0') {
+                     console.log(`player 2 wins!`)
+                        }
+                        else if (square[2].textContent == '0' && square[5].textContent == '0' && square[8].textContent == '0') {
+                           console.log(`player 2 wins!`)
+                            }
+
+                                  // diagonal wins player 2
+                                  else if (square[0].textContent == '0' && square[4].textContent == '0' && square[8].textContent == '0') {
+                                    console.log(`player 2 wins!`)
+                                       }
+                                       else if (square[2].textContent == '0' && square[4].textContent == '0' && square[6].textContent == '0') {
+                                          console.log(`player 2 wins!`)
+                                           }
+    
+
+
+})
 
 }
-//set display by scanning game array 
+})()
