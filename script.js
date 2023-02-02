@@ -15,7 +15,7 @@ for (let z = 0; z < gridSize; z++) {
 })()
 
 //array for keeping track of game
-const gameBoard = new Array(9); //records moves on the gameboard.
+let gameBoard = new Array(9); //records moves on the gameboard.
 
 const Player = (name, sign) => {
 
@@ -65,7 +65,19 @@ else if (this.textContent == 'X' || this.textContent == '0') { //logic for squar
 }
 
 
-//DOM interaction
+//DOM interaction and elements
+
+playerOneWin  = document.querySelector('.player1')
+playerTwoWin = document.querySelector('.player2')
+
+function reset () {
+ for (let i = 0; i < square.length; i++) {
+  square[i].textContent = ""
+  playerOneWin.setAttribute('style', 'display: none;')
+  playerTwoWin.setAttribute('style', 'display: none;')
+  gameBoard = new Array(9)
+ }
+}
 
 
 //listen for click in each square
@@ -80,65 +92,65 @@ square[z].addEventListener('click', () => {
     //PLAYER 1 WIN TRACKER 
     //horizontal wins for player 1
     if (square[0].textContent == 'X' && square[1].textContent == 'X' && square[2].textContent == 'X') {
-        console.log(`player 1 wins!`)
+        return playerOneWin.setAttribute('style', 'display: block')
         }
         else if (square[3].textContent == 'X' && square[4].textContent == 'X' && square[5].textContent == 'X') {
-         console.log(`player 1 wins!`)
+         return playerOneWin.setAttribute('style', 'display: block')
             }
             else if (square[6].textContent == 'X' && square[7].textContent == 'X' && square[8].textContent == 'X') {
-               console.log(`player 1 wins!`)
+               return playerOneWin.setAttribute('style', 'display: block')
                 }
                 //vertical wins for player 1
 
                 if (square[0].textContent == 'X' && square[3].textContent == 'X' && square[6].textContent == 'X') {
-                    console.log(`player 1 wins!`)
+                  return playerOneWin.setAttribute('style', 'display: block')
                     }
                     else if (square[1].textContent == 'X' && square[4].textContent == 'X' && square[7].textContent == 'X') {
-                     console.log(`player 1 wins!`)
+                     return playerOneWin.setAttribute('style', 'display: block')
                         }
                         else if (square[2].textContent == 'X' && square[5].textContent == 'X' && square[8].textContent == 'X') {
-                           console.log(`player 1 wins!`)
+                           return playerOneWin.setAttribute('style', 'display: block')
                             }
 
                             // diagonal wins player 1
                             else if (square[0].textContent == 'X' && square[4].textContent == 'X' && square[8].textContent == 'X') {
-                                console.log(`player 1 wins!`)
+                              return playerOneWin.setAttribute('style', 'display: block')
                                    }
                                    else if (square[2].textContent == 'X' && square[4].textContent == 'X' && square[6].textContent == 'X') {
-                                      console.log(`player 1 wins!`)
+                                    return playerOneWin.setAttribute('style', 'display: block')
                                        }
 
                                        //PLAYER 2 WIN TRACKER
 
                                        //horizontal wins player 2
                                      if (square[0].textContent == '0' && square[1].textContent == '0' && square[2].textContent == '0') {
-                                        console.log(`player 2 wins!`)
+                                       return playerTwoWin.setAttribute('style', 'display: block')
                                         }
                                         else if (square[3].textContent == '0' && square[4].textContent == '0' && square[5].textContent == '0') {
-                                         console.log(`player 2 wins!`)
+                                          return playerTwoWin.setAttribute('style', 'display: block')
                                             }
                                             else if (square[6].textContent == '0' && square[7].textContent == '0' && square[8].textContent == '0') {
-                                               console.log(`player 2 wins!`)
+                                             return playerTwoWin.setAttribute('style', 'display: block')
                                                 }
 
                                                     //vertical wins for player 2
 
                 if (square[0].textContent == '0' && square[3].textContent == '0' && square[6].textContent == '0') {
-                    console.log(`player 2 wins!`)
+                  return playerTwoWin.setAttribute('style', 'display: block')
                     }
                     else if (square[1].textContent == '0' && square[4].textContent == '0' && square[7].textContent == '0') {
-                     console.log(`player 2 wins!`)
+                     return playerTwoWin.setAttribute('style', 'display: block')
                         }
                         else if (square[2].textContent == '0' && square[5].textContent == '0' && square[8].textContent == '0') {
-                           console.log(`player 2 wins!`)
+                           return playerTwoWin.setAttribute('style', 'display: block')
                             }
 
                                   // diagonal wins player 2
                                   else if (square[0].textContent == '0' && square[4].textContent == '0' && square[8].textContent == '0') {
-                                    console.log(`player 2 wins!`)
+                                    return playerTwoWin.setAttribute('style', 'display: block')
                                        }
                                        else if (square[2].textContent == '0' && square[4].textContent == '0' && square[6].textContent == '0') {
-                                          console.log(`player 2 wins!`)
+                                          return playerTwoWin.setAttribute('style', 'display: block')
                                            }
     
 
