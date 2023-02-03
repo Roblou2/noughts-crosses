@@ -50,6 +50,10 @@ grid-gap: 2px;
     display: none;
 }
 
+.draw {
+    display: none;
+}
+
 button.reset {
     width: 150px;
     height: 38px;

@@ -71,14 +71,17 @@ else if (this.textContent == 'X' || this.textContent == '0') { //logic for squar
 
 //DOM interaction and elements
 
-playerOneWin  = document.querySelector('.player1')
-playerTwoWin = document.querySelector('.player2')
+let playerOneWin  = document.querySelector('.player1')
+let playerTwoWin = document.querySelector('.player2')
+let draw = document.querySelector('.draw')
+
 
 function reset () {
  for (let i = 0; i < square.length; i++) {
   square[i].textContent = ""
   playerOneWin.setAttribute('style', 'display: none;')
   playerTwoWin.setAttribute('style', 'display: none;')
+  draw.setAttribute('style', 'display: none')
   gameBoard = new Array(9)
   end = false
         
@@ -194,7 +197,13 @@ square[z].addEventListener('click', () => {
         return false
                                            }
                                          
+//TIE TRACKER
 
+if (gameBoard[8] != undefined && end === false) {
+draw.setAttribute('style', 'display: block;')
+end = true
+return false
+}
 
 }, true)
 
