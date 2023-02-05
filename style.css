@@ -12,6 +12,34 @@ body {
     background-color: black;
 }
 
+.players {
+    margin: 300px 150px 0;
+    position: absolute;
+
+}
+
+.players p, p.first, p.second {
+    display: inline;
+    font-size: 75px;
+    font-family: 'Caveat';
+}
+
+#display p.first-score, p.second-score {
+    display: inline;
+    font-family: 'Caveat';
+    font-size: 50px;
+}
+
+
+
+#display p.wins, p.wins-2 {
+    display: inline;
+    font-family: 'Caveat';
+    font-size: 50px;
+}
+
+
+
 #content {
     display: flex;
     flex-flow: column;
@@ -68,6 +96,12 @@ grid-gap: 2px;
 
 .draw {
     display: none;
+  
+}
+
+.draw p {
+    font-family: 'Caveat';
+    font-size: 50px;
 }
 
 button.reset {

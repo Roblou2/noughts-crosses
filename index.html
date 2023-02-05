@@ -7,13 +7,15 @@
     <title>Noughts and crosses</title>
     <script type="text/javascript" src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link href='https://fonts.googleapis.com/css?family=Caveat' rel='stylesheet'>
     <link rel="stylesheet" href="MaterialDesign-Webfont-master/css/materialdesignicons.css">
 </head>
 <body>
+    <div class="players"><p class="first">Player 1</p> <p>vs</p> <p class="second">Player 2</p></div>
     <div id="content">
     <div id="display">
-        <div class="player1"><p>Player 1 wins!</p></div>
-        <div class="player2"><p>Player 2 wins!</p></div>
+        <div class="player1"><p class="first-score">Player 1</p> <p class="wins">wins!</p></div>
+        <div class="player2"><p class="second-score">Player 2</p> <p class="wins-2">wins!</p></div>
         <div class="draw"><p>It's a draw!</p></div>
         <div class="reset"><button class="reset" onclick="reset()">Reset</button></div>
     </div>

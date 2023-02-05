@@ -14,6 +14,17 @@ for (let z = 0; z < gridSize; z++) {
 }
 })()
 
+//user input for player names 
+
+let name1 = window.prompt("Enter name for player 1 (X)")
+let name2 = window.prompt("Enter name for player 2 (0)")
+
+//display for player names
+let first = document.querySelector('.players p.first')
+let second = document.querySelector('.players p.second')
+first.textContent = name1
+second.textContent = name2
+
 //array for keeping track of game
 
 let gameBoard = new Array(9); //records moves on the gameboard.
@@ -27,10 +38,11 @@ const Player = (name, sign) => {
     return {getName, getSign};
   };
 
+  
 
-  const playerOne = Player('player one', 'X')
+  const playerOne = Player(name1, 'X')
 
-  const playerTwo = Player('player two', '0')
+  const playerTwo = Player(name2, '0')
   let end = false;
 
   //scan the array for the sign of the last move and define next array index as sign different to the previous. Set DOM display to this
@@ -75,6 +87,11 @@ let playerOneWin  = document.querySelector('.player1')
 let playerTwoWin = document.querySelector('.player2')
 let draw = document.querySelector('.draw')
 
+let playerOneWinScore = document.querySelector('.player1 p.first-score')
+let playerTWoWinScore = document.querySelector('.player2 p.second-score')
+
+playerOneWinScore.textContent = name1
+playerTWoWinScore.textContent = name2
 
 function reset () {
  for (let i = 0; i < square.length; i++) {
