@@ -13,7 +13,7 @@ body {
 }
 
 .players {
-    margin: 300px 150px 0;
+    margin: 200px 150px 0;
     position: absolute;
 
 }
@@ -102,6 +102,24 @@ grid-gap: 2px;
 .draw p {
     font-family: 'Caveat';
     font-size: 50px;
+}
+
+.turn p.turn1 {
+   
+    margin: 300px 150px 0;
+    position: absolute;
+    font-family: 'Caveat';
+    font-size: 50px;
+}
+
+
+.turn p.turn2 {
+    display: none;
+    margin: 300px 150px 0;
+    position: absolute;
+    font-family: 'Caveat';
+    font-size: 50px;
+
 }
 
 button.reset {
