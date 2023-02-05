@@ -79,6 +79,7 @@ let draw = document.querySelector('.draw')
 function reset () {
  for (let i = 0; i < square.length; i++) {
   square[i].textContent = ""
+  square[i].style.background = '#fcff9d'
   playerOneWin.setAttribute('style', 'display: none;')
   playerTwoWin.setAttribute('style', 'display: none;')
   draw.setAttribute('style', 'display: none')
@@ -102,6 +103,9 @@ square[z].addEventListener('click', () => {
     //horizontal wins for player 1
     if (square[0].textContent == 'X' && square[1].textContent == 'X' && square[2].textContent == 'X') {
    playerOneWin.setAttribute('style', 'display: block')
+   square[0].style.background = '#e3e3e3'
+   square[1].style.background = '#e3e3e3'
+   square[2].style.background = '#e3e3e3'
  end = true
  return false
 
@@ -109,11 +113,17 @@ square[z].addEventListener('click', () => {
         }
         else if (square[3].textContent == 'X' && square[4].textContent == 'X' && square[5].textContent == 'X') {
         playerOneWin.setAttribute('style', 'display: block')
+        square[3].style.background = '#e3e3e3'
+        square[4].style.background = '#e3e3e3'
+        square[5].style.background = '#e3e3e3'
         end = true
         return false
             }
             else if (square[6].textContent == 'X' && square[7].textContent == 'X' && square[8].textContent == 'X') {
             playerOneWin.setAttribute('style', 'display: block')
+            square[6].style.background = '#e3e3e3'
+            square[7].style.background = '#e3e3e3'
+            square[8].style.background = '#e3e3e3'
             end = true
         return false
                 }
@@ -121,16 +131,25 @@ square[z].addEventListener('click', () => {
 
                 if (square[0].textContent == 'X' && square[3].textContent == 'X' && square[6].textContent == 'X') {
                    playerOneWin.setAttribute('style', 'display: block')
+                   square[0].style.background = '#e3e3e3'
+                   square[3].style.background = '#e3e3e3'
+                   square[6].style.background = '#e3e3e3'
                    end = true
         return false
                     }
                     else if (square[1].textContent == 'X' && square[4].textContent == 'X' && square[7].textContent == 'X') {
                  playerOneWin.setAttribute('style', 'display: block')
+                 square[1].style.background = '#e3e3e3'
+                 square[4].style.background = '#e3e3e3'
+                 square[7].style.background = '#e3e3e3'
                  end = true
         return false
                         }
                         else if (square[2].textContent == 'X' && square[5].textContent == 'X' && square[8].textContent == 'X') {
                         playerOneWin.setAttribute('style', 'display: block')
+                        square[2].style.background = '#e3e3e3'
+                        square[5].style.background = '#e3e3e3'
+                        square[8].style.background = '#e3e3e3'
                         end = true
         return false
                             }
@@ -138,11 +157,17 @@ square[z].addEventListener('click', () => {
                             // diagonal wins player 1
                             else if (square[0].textContent == 'X' && square[4].textContent == 'X' && square[8].textContent == 'X') {
                               playerOneWin.setAttribute('style', 'display: block')
+                              square[0].style.background = '#e3e3e3'
+                              square[4].style.background = '#e3e3e3'
+                              square[8].style.background = '#e3e3e3'
                               end = true
         return false
                                    }
                                    else if (square[2].textContent == 'X' && square[4].textContent == 'X' && square[6].textContent == 'X') {
                                    playerOneWin.setAttribute('style', 'display: block')
+                                   square[2].style.background = '#e3e3e3'
+                                   square[4].style.background = '#e3e3e3'
+                                   square[6].style.background = '#e3e3e3'
                                    end = true
         return false
                                        }
@@ -152,17 +177,26 @@ square[z].addEventListener('click', () => {
                                        //horizontal wins player 2
                                      if (square[0].textContent == '0' && square[1].textContent == '0' && square[2].textContent == '0') {
                                   playerTwoWin.setAttribute('style', 'display: block')
+                                  square[0].style.background = '#e3e3e3'
+                                  square[1].style.background = '#e3e3e3'
+                                  square[2].style.background = '#e3e3e3'
                                   end = true
         return false
                                     
                                         }
                                         else if (square[3].textContent == '0' && square[4].textContent == '0' && square[5].textContent == '0') {
                                           playerTwoWin.setAttribute('style', 'display: block')
+                                          square[3].style.background = '#e3e3e3'
+                                          square[4].style.background = '#e3e3e3'
+                                          square[5].style.background = '#e3e3e3'
                                           end = true
         return false
                                             }
                                             else if (square[6].textContent == '0' && square[7].textContent == '0' && square[8].textContent == '0') {
                                              playerTwoWin.setAttribute('style', 'display: block')
+                                             square[6].style.background = '#e3e3e3'
+                                             square[7].style.background = '#e3e3e3'
+                                             square[8].style.background = '#e3e3e3'
                                              end = true
         return false
                                                 }
@@ -171,16 +205,25 @@ square[z].addEventListener('click', () => {
 
                 if (square[0].textContent == '0' && square[3].textContent == '0' && square[6].textContent == '0') {
                   playerTwoWin.setAttribute('style', 'display: block')
+                  square[0].style.background = '#e3e3e3'
+                  square[3].style.background = '#e3e3e3'
+                  square[6].style.background = '#e3e3e3'
                   end = true
         return false
                     }
                     else if (square[1].textContent == '0' && square[4].textContent == '0' && square[7].textContent == '0') {
                     playerTwoWin.setAttribute('style', 'display: block')
+                    square[1].style.background = '#e3e3e3'
+                    square[4].style.background = '#e3e3e3'
+                    square[7].style.background = '#e3e3e3'
                     end = true
         return false
                         }
                         else if (square[2].textContent == '0' && square[5].textContent == '0' && square[8].textContent == '0') {
                            playerTwoWin.setAttribute('style', 'display: block')
+                           square[2].style.background = '#e3e3e3'
+                           square[5].style.background = '#e3e3e3'
+                           square[8].style.background = '#e3e3e3'
                            end = true
         return false
                             }
@@ -188,11 +231,17 @@ square[z].addEventListener('click', () => {
                                   // diagonal wins player 2
                                   else if (square[0].textContent == '0' && square[4].textContent == '0' && square[8].textContent == '0') {
                                  playerTwoWin.setAttribute('style', 'display: block')
+                                 square[0].style.background = '#e3e3e3'
+                                 square[4].style.background = '#e3e3e3'
+                                 square[8].style.background = '#e3e3e3'
                                  end = true
         return false
                                        }
                                        else if (square[2].textContent == '0' && square[4].textContent == '0' && square[6].textContent == '0') {
                                           playerTwoWin.setAttribute('style', 'display: block')
+                                          square[2].style.background = '#e3e3e3'
+                                          square[4].style.background = '#e3e3e3'
+                                          square[6].style.background = '#e3e3e3'
                                           end = true
         return false
                                            }
@@ -201,6 +250,16 @@ square[z].addEventListener('click', () => {
 
 if (gameBoard[8] != undefined && end === false) {
 draw.setAttribute('style', 'display: block;')
+square[0].style.background = '#e3e3e3'
+square[1].style.background = '#e3e3e3'
+square[2].style.background = '#e3e3e3'
+square[3].style.background = '#e3e3e3'
+square[4].style.background = '#e3e3e3'
+square[5].style.background = '#e3e3e3'
+square[6].style.background = '#e3e3e3'
+square[7].style.background = '#e3e3e3'
+square[8].style.background = '#e3e3e3'
+
 end = true
 return false
 }
